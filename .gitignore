@@ -1,0 +1,4 @@
+DS_Store
+.env
+config.yml
+config/settings_data.json
