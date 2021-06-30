@@ -1,0 +1,83 @@
+<section id="header">
+  <header class="header">
+    <div class="header-container">
+      <nav class="header__user-links">
+        {% for link in linklists.main-menu.links %}
+          {% assign child_list_handle = link.title | handleize %}
+          {% if linklists[child_list_handle].links != blank %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            [
+            {% for childlink in linklists[child_list_handle].links %}
+              <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+            {% endfor %}]
+          {% else %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endif %}
+        {% endfor %}
+        <a href="/cart">cart</a>
+      </nav>
+
+      <div class="header__logo">
+        <h1>
+          <a href="/">
+            {% if section.settings.header_logo != blank %}
+              {{ section.settings.header_logo | img_url: '200x' | img_tag: 'Low Coast Coffee'}}
+            {% else %}
+              Low Coast Coffee  
+            {% endif %}
+          </a>
+        </h1>
+      </div>
+
+      <div class="header__account-links">
+        {% if shop.customer_accounts_enabled %}
+          {% if customer %}
+            <a href="/account">account</a>
+            {{ 'log out'  | customer_logout_link }}
+          {% else %}
+            {{ 'log in ' | customer_login_link }}
+            {{ 'register' | customer_register_link }}
+          {% endif %}
+        {% endif %}
+      </div>
+
+    </div>
+  </header>
+</section>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_logo",
+      "label": "Header Logo"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .header__logo {
+    padding: 0 2rem;
+  }
+
+  .header__user-links {
+    position: absolute;
+    left: 0;
+    margin-left: 1.2rem;
+  }
+{% endstyle %}
