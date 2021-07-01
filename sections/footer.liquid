@@ -1,28 +1,30 @@
 <footer class="footer">
-  <div class="footer-contents">
-    <div class="footer__container">
-      <div class="footer-links">
-        <div class="footer-links__column">
-          <h3 class="footer-label">Links Name</h3>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
+  <div class="footer__max-width">
+    <div class="footer-contents">
+      <div class="footer__container">
+        <div class="footer-links">
+          <div class="footer-links__column">
+            <h3 class="footer-label">Links Name</h3>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+          <div class="footer-links__column">
+            <h3 class="footer-label">Links Name</h3>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-links__column">
-          <h3 class="footer-label">Links Name</h3>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
-        </div>
+        <div class="footer-form"></div>
       </div>
-      <div class="footer-form"></div>
     </div>
+    <div class="footer-copyright"></div>
   </div>
-  <div class="footer-copyright"></div>
 </footer>
 
 {% schema %}
@@ -51,10 +53,14 @@
   padding: 1rem 2rem;
 }
 
+.footer__max-width {
+  max-width: 1240px;
+  margin: .2rem auto;
+}
+
 .footer__container {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1.2rem;
 }
 
 .footer-links {
