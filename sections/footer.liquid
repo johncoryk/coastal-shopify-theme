@@ -10,6 +10,14 @@
             <li><a href="#">Link 3</a></li>
           </ul>
         </div>
+        <div class="footer-links__column">
+          <h3 class="footer-label">Links Name</h3>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-form"></div>
     </div>
@@ -44,8 +52,22 @@
 }
 
 .footer__container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1.2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  width: 55%;
+}
+
+.footer-links__column {
+  padding: 3.5rem 1rem;
+  flex: 0 1 100%;
+}
+
+.footer-label {
+  margin-bottom: 1.5rem;
+}
 {% endstyle %}

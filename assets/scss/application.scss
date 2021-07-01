@@ -19,3 +19,25 @@ a {
 ul {
 	list-style: none;
 }
+
+img {
+	max-width: 100%;
+}
+
+// FULL WIDTH CONTAINER SECTION
+.full-width-cta__container {
+	margin-bottom: 2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.full-width-cta {
+		max-width: 2100px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+}

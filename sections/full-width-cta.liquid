@@ -43,21 +43,12 @@
 
 {% style %}
 @media only screen and (min-width: 768px) {
-    .full-width-cta {
-      max-width: 2100px;
-      margin: 0 auto;
-    }
-
-    .full-width-cta__container {
-      margin-bottom: 2.5rem;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      max-height: {{ section.settings.max-size }}px;
-      object-fit: cover;
-    }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: {{ section.settings.max-size }}px;
+    object-fit: cover;
   }
+}
 {% endstyle %}
