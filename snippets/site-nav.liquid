@@ -16,7 +16,7 @@
   <h1>
     <a href="/">
       {% if section.settings.header_logo != blank %}
-        {{ section.settings.header_logo | img_url: '200x' | img_tag: section.settings.header_logo.alt }}
+        {{ section.settings.header_logo | img_url: '200x' | img_tag: section.settings.header_logo.alt | escape }}
       {% else %}
         Company Logo
       {% endif %}

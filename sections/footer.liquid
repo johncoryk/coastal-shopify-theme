@@ -1,0 +1,51 @@
+<footer class="footer">
+  <div class="footer-contents">
+    <div class="footer__container">
+      <div class="footer-links">
+        <div class="footer-links__column">
+          <h3 class="footer-label">Links Name</h3>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-form"></div>
+    </div>
+  </div>
+  <div class="footer-copyright"></div>
+</footer>
+
+{% schema %}
+
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top-border-width",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Top Border Width",
+      "default": 1
+    }
+  ]
+}
+
+{% endschema %}
+
+{% style %}
+.footer {
+  border-top: {{ section.settings.top-border-width }}px solid grey;
+  padding: 1rem 2rem;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.2rem;
+  }
+{% endstyle %}
