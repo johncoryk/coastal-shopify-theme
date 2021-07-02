@@ -6,5 +6,45 @@
     "theme_author": "Cory Kelley",
     "theme_documentation_url": "https://github.com/johncoryk/coastal-shopify-theme",
     "theme_support_url": "https://corykelley.com"
+  },
+  {
+    "name": "Social Links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social.twitter",
+        "label": "Twitter URL"
+      },
+      {
+        "type": "text",
+        "id": "social.facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social.instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social.pintrest",
+        "label": "Pinterest URL"
+      },
+      {
+        "type": "text",
+        "id": "social.linkedin",
+        "label": "Linkedin URL"
+      },
+      {
+        "type": "text",
+        "id": "social.vimeo",
+        "label": "Vimeo URL"
+      },
+      {
+        "type": "text",
+        "id": "social.youtube",
+        "label": "YouTube URL"
+      }
+    ]
   }
 ]

@@ -1,0 +1,29 @@
+<section class="value-props-banner">
+  <div class="value-props-banner__container">
+    <ul class="value-props-banner__icons">
+      <div class="value-props-banner__icon">
+        {%- include 'icon-lock' -%}
+      </div>
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+
+{
+  "name": "Value Props Banner",
+  "presets": [
+    {
+      "category": "Banners",
+      "name": "Value Props Banner"
+    }
+  ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+.value-props-banner__icon svg {
+    width: 100px;
+  }
+{% endstylesheet %}

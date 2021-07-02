@@ -1,1 +1,1 @@
-# Low Coast Coffee Shopify Theme - Coastal
+# Coastal Theme for Shopify
