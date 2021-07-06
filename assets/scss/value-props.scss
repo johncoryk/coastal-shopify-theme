@@ -1,10 +1,11 @@
-.value-props__container {
+.value-props__section {
 	margin-block: 1.75rem;
 }
 
 .value-props {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .value-prop__container {
