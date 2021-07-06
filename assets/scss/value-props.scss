@@ -1,0 +1,32 @@
+.value-props__container {
+	margin-block: 1.75rem;
+}
+
+.value-props {
+	display: flex;
+	flex-direction: column;
+}
+
+.value-prop__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1.5rem;
+}
+
+.value-prop__icon svg {
+	width: 80px;
+}
+
+.value-prop__text {
+	margin-top: 0.25rem;
+	text-align: center;
+	width: min(80%, 225px);
+}
+
+@media only screen and (min-width: 1020px) {
+	.value-props {
+		flex-direction: row;
+	}
+}

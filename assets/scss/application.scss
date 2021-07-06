@@ -1,3 +1,7 @@
+@use './header.scss';
+@use './full-width-cta.scss';
+@use './value-props.scss';
+
 *,
 :after,
 :before,
@@ -21,23 +25,13 @@ ul {
 }
 
 img {
-	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
 }
 
-// FULL WIDTH CONTAINER SECTION
-.full-width-cta__container {
-	margin-bottom: 2.5rem;
-}
-
-@media only screen and (min-width: 768px) {
-	.full-width-cta {
-		max-width: 2100px;
-		margin: 0 auto;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	body {
-		font-size: 14px;
-	}
+.container {
+	padding: 0.25rem 1rem;
+	max-width: 1800px;
+	margin: 0 auto;
 }

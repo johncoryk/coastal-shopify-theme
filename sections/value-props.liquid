@@ -1,9 +1,39 @@
-<section class="value-props-banner">
-  <div class="value-props-banner__container">
-    <ul class="value-props-banner__icons">
-      <div class="value-props-banner__icon">
-        {%- include 'icon-lock' -%}
-      </div>
+<section style="background: {{ section.settings.banner_color }}; color: {{ section.settings.text_color }}; fill: {{ section.settings.text_color }}">
+  <div class="value-props__container container">
+    <ul class="value-props">
+      <li>
+        <div class="value-prop__container">
+          <div class="value-prop__icon">
+            {%- include 'icon-lock' -%}
+          </div>
+          <div class="value-prop__text">
+            <h3>SAMPLE TEXT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="value-prop__container">
+          <div class="value-prop__icon">
+            {%- include 'icon-lock' -%}
+          </div>
+          <div class="value-prop__text">
+            <h3>SAMPLE TEXT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="value-prop__container">
+          <div class="value-prop__icon">
+            {%- include 'icon-lock' -%}
+          </div>
+          <div class="value-prop__text">
+            <h3>SAMPLE TEXT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </section>
@@ -12,6 +42,20 @@
 
 {
   "name": "Value Props Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "banner_color",
+      "label": "Value Prop Banner Color",
+      "default": "#dbdbdb"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Value Prop Icon and Text Color",
+      "default": "#000000"
+    }
+  ],
   "presets": [
     {
       "category": "Banners",
@@ -21,9 +65,3 @@
 }
 
 {% endschema %}
-
-{% stylesheet %}
-.value-props-banner__icon svg {
-    width: 100px;
-  }
-{% endstylesheet %}
