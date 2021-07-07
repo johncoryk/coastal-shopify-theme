@@ -1,6 +1,6 @@
-@use './header.scss';
-@use './full-width-cta.scss';
-@use './value-props.scss';
+@import './header.css';
+@import './full-width-cta.css';
+@import './value-props.css';
 
 *,
 :after,

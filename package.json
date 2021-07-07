@@ -1,21 +1,18 @@
 {
-  "name": "low-coast-coffee",
+  "name": "coastal-shopify-theme",
   "version": "1.0.0",
-  "description": "Shopify theme for Low Coast Coffee",
+  "description": "Coastal Shopify Theme.",
   "main": "index.js",
-  "repository": "https://github.com/johncoryk/low-coast-coffee.git",
+  "repository": "https://github.com/johncoryk/coastal-shopify-theme",
   "author": "Cory Kelley <coryk0789@gmail.com> (https://corykelley.com)",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@shopify/themekit": "^1.1.9",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^5.0.0"
-  },
   "devDependencies": {
+    "@shopify/themekit": "^1.1.9",
     "gulp": "^4.0.2",
-    "sass": "^1.35.1"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0"
   }
 }
