@@ -1,0 +1,45 @@
+<section>
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {%- assign collection = collections[section.settings.featured_collection] -%}
+  <div class="featured-collection__container flex--row">
+    {% for product in collection.products %}
+    <div class="featured-collection-product__container">
+      <div class="featured-collection-product-image__container">
+        {{ product.featured_image | img_url: '600x' | img_tag: product.title }}
+      </div>
+      <h3>{{ product.title }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+
+{
+  "name": "Featured Collection Row",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Collection Title"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured Collection"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Products",
+      "name":"Featured Collection Row"
+    }
+  ]
+}
+
+{% endschema %}
