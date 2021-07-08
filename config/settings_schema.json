@@ -12,38 +12,67 @@
     "settings": [
       {
         "type": "text",
-        "id": "social.twitter",
+        "id": "social_twitter",
         "label": "Twitter URL"
       },
       {
         "type": "text",
-        "id": "social.facebook",
+        "id": "social_facebook",
         "label": "Facebook URL"
       },
       {
         "type": "text",
-        "id": "social.instagram",
+        "id": "social_instagram",
         "label": "Instagram URL"
       },
       {
         "type": "text",
-        "id": "social.pintrest",
+        "id": "social_pintrest",
         "label": "Pinterest URL"
       },
       {
         "type": "text",
-        "id": "social.linkedin",
+        "id": "social_linkedin",
         "label": "Linkedin URL"
       },
       {
         "type": "text",
-        "id": "social.vimeo",
+        "id": "social_vimeo",
         "label": "Vimeo URL"
       },
       {
         "type": "text",
-        "id": "social.youtube",
+        "id": "social_youtube",
         "label": "YouTube URL"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_text_primary",
+        "label": "Primary Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_text_accent",
+        "label": "Accent Text Color",
+        "default": "#eeeeee"
+      },
+      {
+        "type": "color",
+        "id": "color_link_primary",
+        "label": "Primary Link Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_link_accent",
+        "label": "Accent Link Color",
+        "default": "#444ddd"
       }
     ]
   }

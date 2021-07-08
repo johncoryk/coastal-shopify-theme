@@ -1,4 +1,4 @@
-<nav class="header__user-links">
+<nav class="site-nav__user-links">
   {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
     {% if linklists[child_list_handle].links != blank %}
@@ -12,7 +12,7 @@
     {% endif %}
   {% endfor %}
 </nav>
-<div class="header__logo">
+<div class="site-nav__logo">
   <h1>
     <a href="/">
       {% if section.settings.header_logo != blank %}
@@ -23,7 +23,7 @@
     </a>
   </h1>
 </div>
-<div class="header__account-links">
+<div class="site-nav__account-links">
   {% if shop.customer_accounts_enabled %}
     {% if customer %}
       <a href="/account">account</a>

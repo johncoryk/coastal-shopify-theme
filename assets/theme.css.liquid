@@ -1,0 +1,122 @@
+/*================ Basic Resets ================*/
+*,
+:after,
+:before,
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	color: var(--primary);
+}
+
+a {
+	color: var(--link-primary);
+	text-decoration: none;
+	transition: all ease 150ms;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container {
+	padding: 0.25rem 1rem;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+/*================ Colors ================*/
+:root {
+	--primary: {{ settings.color_text_primary }};
+	--accent: {{ settings.color_text_accent }};
+	--link-primary: {{ settings.color_link_primary }};
+	--link-accent: {{ settings.color_link_accent }};
+}
+
+/*================ Sections ================*/
+/* HEADER */
+.header-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: min(90%, 1450px);
+	margin: 1rem auto 1.5rem;
+	padding: 1.5rem 1.25rem;
+	position: relative;
+}
+
+.header__logo {
+	padding: 0 2rem;
+}
+
+/* FULL WIDTH CTA */
+.full-width-cta {
+	max-width: 2100px;
+	margin: 0 auto;
+}
+
+.full-width-cta__container {
+	margin-block: 1.75rem;
+}
+
+/* VALUE PROPS */
+.value-props__section {
+	margin-block: 1.75rem;
+}
+
+.value-props {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.value-prop__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1.5rem;
+}
+
+.value-prop__icon svg {
+	width: 80px;
+}
+
+.value-prop__text {
+	margin-top: 0.25rem;
+	text-align: center;
+	width: min(80%, 225px);
+}
+
+@media only screen and (min-width: 1020px) {
+	.value-props {
+		flex-direction: row;
+	}
+}
+
+/*================ Snippets ================*/
+/* SITE NAV */
+.site-nav__user-links {
+	position: absolute;
+	left: 0;
+	margin-left: 1.2rem;
+}
+
+.site-nav__user-links a:not(:first-child) {
+	padding-left: 1.85rem;
+}
+
+.site-nav__user-links a:hover {
+	color: var(--link-accent);
+}
