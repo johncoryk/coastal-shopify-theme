@@ -1,6 +1,6 @@
 <section>
   {% if section.settings.title != blank %}
-    <div class="section-header text-center">
+    <div class="featured-collection__section-header text-center text-uppercase">
       <h2>{{ section.settings.title | escape }}</h2>
     </div>
   {% endif %}
@@ -10,12 +10,12 @@
     {% for product in collection.products %}
       <div class="product__container flex--column">
         <div class="product-image__container">
-          <a href="{{ product.url }}">
+          <a class="product-image" href="{{ product.url }}">
             {{ product.featured_image | img_url: '600x' | img_tag: product.title }}
           </a>
         </div>
         <div class="product-info__container">
-          <h3>{{ product.title }}</h3>
+          <h3 class="text-uppercase">{{ product.title }}</h3>
           {% if product.price_min != blank and product.price_max != blank %}
             <p>{{ product.price_min | money }}
               -
