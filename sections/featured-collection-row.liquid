@@ -6,14 +6,25 @@
   {% endif %}
 
   {%- assign collection = collections[section.settings.featured_collection] -%}
-  <div class="featured-collection__container flex--row">
+  <div class="featured-collection__container flex--column margin-block--med">
     {% for product in collection.products %}
-    <div class="featured-collection-product__container">
-      <div class="featured-collection-product-image__container">
-        {{ product.featured_image | img_url: '600x' | img_tag: product.title }}
+      <div class="product__container flex--column">
+        <div class="product-image__container">
+          <a href="{{ product.url }}">
+            {{ product.featured_image | img_url: '600x' | img_tag: product.title }}
+          </a>
+        </div>
+        <div class="product-info__container">
+          <h3>{{ product.title }}</h3>
+          {% if product.price_min != blank and product.price_max != blank %}
+            <p>{{ product.price_min | money }}
+              -
+              {{ product.price_max | money }}</p>
+          {% else %}
+            <p>{{ product.price | money }}</p>
+          {% endif %}
+        </div>
       </div>
-      <h3>{{ product.title }}</h3>
-    </div>
     {% endfor %}
   </div>
 </section>
