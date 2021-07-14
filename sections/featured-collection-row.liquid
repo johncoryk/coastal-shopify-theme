@@ -6,7 +6,7 @@
   {% endif %}
 
   {%- assign collection = collections[section.settings.featured_collection] -%}
-  <div class="featured-collection__container flex--column margin-block--med">
+  <div class="featured-collection__container flex--column margin-block--med container">
     {% for product in collection.products %}
       <div class="product__container flex--column">
         <div class="product-image__container">
@@ -15,7 +15,9 @@
           </a>
         </div>
         <div class="product-info__container">
-          <h3 class="product-info__title text-uppercase">{{ product.title }}</h3>
+          <a class="product-image" href="{{ product.url }}">
+            <h3 class="product-info__title text-uppercase">{{ product.title }}</h3>
+          </a>
           {% if product.price_min != blank and product.price_max != blank %}
             <p class="product-info__price">{{ product.price_min | money }}
               -
