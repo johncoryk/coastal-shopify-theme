@@ -1,8 +1,10 @@
 <section class="full-width-cta">
   <div class="full-width-cta__container margin-block--med">
-    <a href={{ section.settings.cta-url }}>
-      {{ section.settings.cta-image | img_url:'1200x' | img_tag: section.settings.cta-image.alt }}
-    </a>
+      {{ section.settings.cta_image | img_url:'1200x' | img_tag: section.settings.cta_image.alt }}
+    <div class="full-width-cta__cta flex--column">
+      <h2>{{ section.settings.cta_text }}</h2>
+      <a href="{{ section.settings.selected_collection.url }}" class="button">{{ section.settings.button_text }}</a>
+    </div>
   </div>
 </section>
 
@@ -14,21 +16,38 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "cta-image",
+      "id": "cta_image",
       "label": "CTA Image"
     }, {
-      "type": "url",
-      "id": "cta-url",
-      "label": "CTA url"
-    }, {
       "type": "range",
-      "id": "max-size",
+      "id": "max_size",
       "min": 300,
       "max": 1000,
       "step": 50,
       "unit": "px",
       "label": "Image Max Height",
       "default": 750
+    }, {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Heading Text",
+      "default": "This is the CTA heading!",
+      "placeholder": "New Items on Sale!"
+    }, {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA Heading Text Color",
+      "default": "#ffffff"
+    }, {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now!",
+      "placeholder": "Click Me"
+    }, {
+      "type": "collection",
+      "id": "selected_collection",
+      "label": "Featured Collection"
     }
   ],
   "presets": [
@@ -42,10 +61,12 @@
 {% endschema %}
 
 {% style %}
-@media only screen and (min-width: 768px) {
   img {
-    max-height: {{ section.settings.max-size }}px;
+    max-height: {{ section.settings.max_size }}px;
     object-fit: cover;
   }
-}
+
+  .full-width-cta__cta h2 {
+    color: {{ section.settings.cta_text_color }};
+  }
 {% endstyle %}

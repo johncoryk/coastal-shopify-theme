@@ -74,6 +74,23 @@ img {
 	margin-block: 3.5rem;
 }
 
+.button {
+	display: inline-block;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--accent);
+  background-color: var(--primary);
+  border: none;
+	text-transform: uppercase;
+	letter-spacing: 1.7px;
+	transition: transform ease-in-out 150ms;
+}
+
+.button:hover {
+  transform: scale(1.03);
+	color: var(--accent);
+}
 /*================ Sections ================*/
 /* HEADER */
 .header-container {
@@ -95,6 +112,21 @@ img {
 .full-width-cta {
 	max-width: 2100px;
 	margin: 0 auto;
+}
+
+.full-width-cta__container {
+	position: relative;
+}
+
+.full-width-cta__cta {
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
 }
 
 /* VALUE PROPS */
