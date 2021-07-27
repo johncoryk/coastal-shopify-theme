@@ -76,7 +76,8 @@ img {
 
 .button {
 	display: inline-block;
-  padding: 0.85rem 1.5rem;
+  padding: 1rem 1.5rem;
+	margin-block: .5rem;
   cursor: pointer;
   text-decoration: none;
   color: var(--accent);
@@ -99,13 +100,20 @@ img {
 	align-items: center;
 	justify-content: center;
 	width: min(90%, 1450px);
-	margin: 1rem auto 1.5rem;
-	padding: 1.5rem 1.25rem;
+	margin: 1rem auto;
+	padding: .75rem 1.25rem .3rem;
 	position: relative;
+	transition: padding ease-in-out 150ms;
 }
 
 .header__logo {
 	padding: 0 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.header-container {
+		padding: 1.5rem 1.25rem 1rem;
+	}
 }
 
 /* FULL WIDTH CTA */
@@ -127,6 +135,7 @@ img {
 	right: 0;
 	left: 0;
 	margin: auto;
+	width: min(90vw, 550px);
 }
 
 /* VALUE PROPS */
@@ -141,8 +150,16 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 1.5rem;
+	margin: 0 1.5rem;
 	padding-block: 1.5rem;
+}
+
+.value-prop__container:first-child {
+	margin-top: .75rem;
+}
+
+.value-prop__container:last-child {
+	margin-bottom: .75rem;
 }
 
 .value-prop__icon svg {
@@ -226,6 +243,7 @@ img {
 	position: absolute;
 	left: 0;
 	margin-left: 1.2rem;
+	width: 25px;
 }
 
 .site-nav__user-links {
@@ -240,10 +258,6 @@ img {
 
 .site-nav__user-links a:hover {
 	color: var(--link-accent);
-}
-
-.site-nav__hamburger {
-	width: 30px;
 }
 
 @media only screen and (min-width: 768px) {
